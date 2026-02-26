@@ -3,21 +3,29 @@ import java.util.Scanner;
 public class PalindromeCheckerApp {
     public static void main(String[] args) {
 
-        // Welcome Message
+        // Application Name and Version
         System.out.println("====================================");
         System.out.println("     Palindrome Checker App");
-        System.out.println("     Version 1.0");
+        System.out.println("     Version 1.0 - UC2");
         System.out.println("====================================");
 
-        // Scanner object to take user input
-        Scanner scanner = new Scanner(System.in);
+        // Hardcoded String
+        String word = "madam";
 
-        System.out.println("Press Enter to continue...");
-        scanner.nextLine();  // Wait for user input
+        // Reverse the string
+        String reversed = "";
 
-        System.out.println("Application Started Successfully!");
-        System.out.println("Ready for next use case...");
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed = reversed + word.charAt(i);
+        }
 
-        scanner.close();
+        // Check palindrome using if-else
+        if (word.equals(reversed)) {
+            System.out.println("The word \"" + word + "\" is a Palindrome.");
+        } else {
+            System.out.println("The word \"" + word + "\" is NOT a Palindrome.");
+        }
+
+        System.out.println("Program Ended.");
     }
-}
+    }
